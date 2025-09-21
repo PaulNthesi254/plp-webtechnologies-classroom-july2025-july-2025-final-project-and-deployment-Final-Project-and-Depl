@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nature's Healing - Natural Remedies & Herbal Medicine</title>
+    <link rel="stylesheet" href="#styles">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-leaf"></i>
+                <span>Nature's Healing</span>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link active">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#remedies" class="nav-link">Remedies</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#herbs" class="nav-link">Herbs & Spices</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#conditions" class="nav-link">Conditions</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home Page -->
+    <div id="home" class="page active">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1 class="fade-in">Discover Nature's Healing Power</h1>
+                <p class="fade-in">Explore time-tested natural remedies, herbs, and spices for common health conditions. Your guide to alternative wellness solutions.</p>
+                <div class="hero-buttons fade-in">
+                    <button class="btn btn-primary" onclick="showPage('remedies')">Explore Remedies</button>
+                    <button class="btn btn-secondary" onclick="showPage('herbs')">Browse Herbs</button>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="herb-illustration">
+                    <i class="fas fa-seedling"></i>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="features">
+            <div class="container">
+                <h2 class="section-title">Why Choose Natural Remedies?</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <i class="fas fa-leaf"></i>
+                        <h3>Natural & Safe</h3>
+                        <p>Gentle healing with minimal side effects, working in harmony with your body's natural processes.</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-clock"></i>
+                        <h3>Time-Tested</h3>
+                        <p>Thousands of years of traditional use and modern research supporting herbal medicine.</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-dollar-sign"></i>
+                        <h3>Cost-Effective</h3>
+                        <p>Affordable alternatives that often cost less than conventional medications.</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-home"></i>
+                        <h3>Accessible</h3>
+                        <p>Many remedies can be prepared at home using common herbs and spices.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quick Remedies -->
+        <section class="quick-remedies">
+            <div class="container">
+                <h2 class="section-title">Popular Natural Remedies</h2>
+                <div class="remedies-grid">
+                    <div class="remedy-card">
+                        <div class="remedy-icon">🍯</div>
+                        <h3>Honey & Lemon</h3>
+                        <p>For cough and sore throat</p>
+                    </div>
+                    <div class="remedy-card">
+                        <div class="remedy-icon">🫚</div>
+                        <h3>Ginger Tea</h3>
+                        <p>For nausea and digestion</p>
+                    </div>
+                    <div class="remedy-card">
+                        <div class="remedy-icon">🧄</div>
+                        <h3>Garlic</h3>
+                        <p>For immune system boost</p>
+                    </div>
+                    <div class="remedy-card">
+                        <div class="remedy-icon">🌿</div>
+                        <h3>Turmeric</h3>
+                        <p>For inflammation relief</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Remedies Page -->
+    <div id="remedies" class="page">
+        <div class="page-header">
+            <div class="container">
+                <h1>Natural Remedies</h1>
+                <p>Comprehensive guide to natural treatments for common health conditions</p>
+            </div>
+        </div>
+
+        <div class="container">
+            <!-- Search and Filter -->
+            <div class="search-filter">
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="remedySearch" placeholder="Search remedies...">
+                </div>
+                <div class="filter-tabs">
+                    <button class="filter-tab active" data-filter="all">All</button>
+                    <button class="filter-tab" data-filter="digestive">Digestive</button>
+                    <button class="filter-tab" data-filter="respiratory">Respiratory</button>
+                    <button class="filter-tab" data-filter="skin">Skin</button>
+                    <button class="filter-tab" data-filter="pain">Pain Relief</button>
+                </div>
+            </div>
+
+            <!-- Remedies Grid -->
+            <div class="remedies-container">
+                <div class="remedy-detailed-card" data-category="respiratory">
+                    <div class="remedy-image">
+                        <i class="fas fa-seedling"></i>
+                    </div>
+                    <div class="remedy-content">
+                        <h3>Honey and Lemon for Cough</h3>
+                        <div class="remedy-tags">
+                            <span class="tag">Respiratory</span>
+                            <span class="tag">Antimicrobial</span>
+                        </div>
+                        <p><strong>Ingredients:</strong> 2 tbsp raw honey, 1 tbsp fresh lemon juice, warm water</p>
+                        <p><strong>Preparation:</strong> Mix honey and lemon in warm water. Drink 2-3 times daily.</p>
+                        <p><strong>Benefits:</strong> Soothes throat irritation, reduces cough, boosts immune system.</p>
+                        <div class="remedy-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(4.8/5)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="remedy-detailed-card" data-category="digestive">
+                    <div class="remedy-image">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <div class="remedy-content">
+                        <h3>Ginger Tea for Nausea</h3>
+                        <div class="remedy-tags">
+                            <span class="tag">Digestive</span>
+                            <span class="tag">Anti-nausea</span>
+                        </div>
+                        <p><strong>Ingredients:</strong> 1 inch fresh ginger root, 1 cup hot water, honey to taste</p>
+                        <p><strong>Preparation:</strong> Slice ginger, steep in hot water for 10 minutes, strain and add honey.</p>
+                        <p><strong>Benefits:</strong> Reduces nausea, aids digestion, anti-inflammatory properties.</p>
+                        <div class="remedy-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(4.9/5)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="remedy-detailed-card" data-category="pain">
+                    <div class="remedy-image">
+                        <i class="fas fa-fire"></i>
+                    </div>
+                    <div class="remedy-content">
+                        <h3>Turmeric Golden Milk</h3>
+                        <div class="remedy-tags">
+                            <span class="tag">Anti-inflammatory</span>
+                            <span class="tag">Pain Relief</span>
+                        </div>
+                        <p><strong>Ingredients:</strong> 1 tsp turmeric powder, 1 cup warm milk, pinch of black pepper, honey</p>
+                        <p><strong>Preparation:</strong> Mix turmeric and pepper in warm milk, sweeten with honey.</p>
+                        <p><strong>Benefits:</strong> Reduces inflammation, relieves joint pain, improves sleep quality.</p>
+                        <div class="remedy-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>(4.7/5)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="remedy-detailed-card" data-category="skin">
+                    <div class="remedy-image">
+                        <i class="fas fa-spa"></i>
+                    </div>
+                    <div class="remedy-content">
+                        <h3>Aloe Vera for Skin Healing</h3>
+                        <div class="remedy-tags">
+                            <span class="tag">Skin Care</span>
+                            <span class="tag">Healing</span>
+                        </div>
+                        <p><strong>Ingredients:</strong> Fresh aloe vera gel (from plant leaf)</p>
+                        <p><strong>Preparation:</strong> Extract gel from aloe leaf, apply directly to affected area.</p>
+                        <p><strong>Benefits:</strong> Heals burns, soothes irritation, moisturizes dry skin.</p>
+                        <div class="remedy-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(4.6/5)</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Herbs & Spices Page -->
+    <div id="herbs" class="page">
+        <div class="page-header">
+            <div class="container">
+                <h1>Herbs & Spices Guide</h1>
+                <p>Complete encyclopedia of medicinal herbs and healing spices</p>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="herbs-grid">
+                <div class="herb-card">
+                    <div class="herb-image">🌿</div>
+                    <h3>Turmeric</h3>
+                    <p class="herb-latin">Curcuma longa</p>
+                    <div class="herb-properties">
+                        <span class="property">Anti-inflammatory</span>
+                        <span class="property">Antioxidant</span>
+                    </div>
+                    <p><strong>Uses:</strong> Arthritis, wound healing, digestive issues</p>
+                    <p><strong>Preparation:</strong> Powder, paste, tea, golden milk</p>
+                    <button class="herb-details-btn" onclick="showHerbDetails('turmeric')">Learn More</button>
+                </div>
+
+                <div class="herb-card">
+                    <div class="herb-image">🫚</div>
+                    <h3>Ginger</h3>
+                    <p class="herb-latin">Zingiber officinale</p>
+                    <div class="herb-properties">
+                        <span class="property">Anti-nausea</span>
+                        <span class="property">Digestive</span>
+                    </div>
+                    <p><strong>Uses:</strong> Nausea, motion sickness, cold symptoms</p>
+                    <p><strong>Preparation:</strong> Fresh tea, dried powder, crystallized</p>
+                    <button class="herb-details-btn" onclick="showHerbDetails('ginger')">Learn More</button>
+                </div>
+
+                <div class="herb-card">
+                    <div class="herb-image">🧄</div>
+                    <h3>Garlic</h3>
+                    <p class="herb-latin">Allium sativum</p>
+                    <div class="herb-properties">
+                        <span class="property">Antimicrobial</span>
+                        <span class="property">Immune Boost</span>
+                    </div>
+                    <p><strong>Uses:</strong> Infections, high cholesterol, blood pressure</p>
+                    <p><strong>Preparation:</strong> Fresh cloves, aged extract, supplements</p>
+                    <button class="herb-details-btn" onclick="showHerbDetails('garlic')">Learn More</button>
+                </div>
+
+                <div class="herb-card">
+                    <div class="herb-image">🍯</div>
+                    <h3>Honey</h3>
+                    <p class="herb-latin">Mel</p>
+                    <div class="herb-properties">
+                        <span class="property">Antibacterial</span>
+                        <span class="property">Wound Healing</span>
+                    </div>
+                    <p><strong>Uses:</strong> Cough, wounds, sore throat, energy</p>
+                    <p><strong>Preparation:</strong> Raw honey, manuka honey, infusions</p>
+                    <button class="herb-details-btn" onclick="showHerbDetails('honey')">Learn More</button>
+                </div>
+
+                <div class="herb-card">
+                    <div class="herb-image">🌱</div>
+                    <h3>Echinacea</h3>
+                    <p class="herb-latin">Echinacea purpurea</p>
+                    <div class="herb-properties">
+                        <span class="property">Immune Support</span>
+                        <span class="property">Anti-viral</span>
+                    </div>
+                    <p><strong>Uses:</strong> Common cold, flu prevention, immune support</p>
+                    <p><strong>Preparation:</strong> Tea, tincture, capsules, extract</p>
+                    <button class="herb-details-btn" onclick="showHerbDetails('echinacea')">Learn More</button>
+                </div>
+
+                <div class="herb-card">
+                    <div class="herb-image">🌿</div>
+                    <h3>Peppermint</h3>
+                    <p class="herb-latin">Mentha piperita</p>
+                    <div class="herb-properties">
+                        <span class="property">Digestive</span>
+                        <span class="property">Cooling</span>
+                    </div>
+                    <p><strong>Uses:</strong> Indigestion, headaches, respiratory issues</p>
+                    <p><strong>Preparation:</strong> Tea, essential oil, fresh leaves</p>
+                    <button class="herb-details-btn" onclick="showHerbDetails('peppermint')">Learn More</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Conditions Page -->
+    <div id="conditions" class="page">
+        <div class="page-header">
+            <div class="container">
+                <h1>Common Conditions</h1>
+                <p>Natural treatment approaches for everyday health concerns</p>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="conditions-grid">
+                <div class="condition-card">
+                    <div class="condition-icon">
+                        <i class="fas fa-head-side-cough"></i>
+                    </div>
+                    <h3>Cold & Flu</h3>
+                    <p>Natural ways to boost immunity and recover faster</p>
+                    <div class="condition-remedies">
+                        <h4>Recommended Remedies:</h4>
+                        <ul>
+                            <li>Honey and lemon tea</li>
+                            <li>Ginger and garlic soup</li>
+                            <li>Echinacea supplements</li>
+                            <li>Steam inhalation with eucalyptus</li>
+                        </ul>
+                    </div>
+                    <div class="condition-prevention">
+                        <h4>Prevention Tips:</h4>
+                        <p>Regular exercise, adequate sleep, stress management, and seasonal immune support herbs.</p>
+                    </div>
+                </div>
+
+                <div class="condition-card">
+                    <div class="condition-icon">
+                        <i class="fas fa-stomach"></i>
+                    </div>
+                    <h3>Digestive Issues</h3>
+                    <p>Gentle solutions for stomach problems and poor digestion</p>
+                    <div class="condition-remedies">
+                        <h4>Recommended Remedies:</h4>
+                        <ul>
+                            <li>Ginger tea for nausea</li>
+                            <li>Peppermint for bloating</li>
+                            <li>Chamomile for stomach upset</li>
+                            <li>Fennel seeds after meals</li>
+                        </ul>
+                    </div>
+                    <div class="condition-prevention">
+                        <h4>Prevention Tips:</h4>
+                        <p>Eat mindfully, avoid processed foods, stay hydrated, and include digestive herbs in cooking.</p>
+                    </div>
+                </div>
+
+                <div class="condition-card">
+                    <div class="condition-icon">
+                        <i class="fas fa-bed"></i>
+                    </div>
+                    <h3>Sleep Disorders</h3>
+                    <p>Natural approaches to improve sleep quality and duration</p>
+                    <div class="condition-remedies">
+                        <h4>Recommended Remedies:</h4>
+                        <ul>
+                            <li>Chamomile tea before bed</li>
+                            <li>Lavender essential oil</li>
+                            <li>Valerian root supplements</li>
+                            <li>Passionflower tea</li>
+                        </ul>
+                    </div>
+                    <div class="condition-prevention">
+                        <h4>Prevention Tips:</h4>
+                        <p>Consistent sleep schedule, screen-free bedroom, cool temperature, and relaxing bedtime routine.</p>
+                    </div>
+                </div>
+
+                <div class="condition-card">
+                    <div class="condition-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>Stress & Anxiety</h3>
+                    <p>Calming herbs and practices for mental wellness</p>
+                    <div class="condition-remedies">
+                        <h4>Recommended Remedies:</h4>
+                        <ul>
+                            <li>Ashwagandha for stress</li>
+                            <li>Lemon balm tea</li>
+                            <li>Passionflower extract</li>
+                            <li>Holy basil (Tulsi)</li>
+                        </ul>
+                    </div>
+                    <div class="condition-prevention">
+                        <h4>Prevention Tips:</h4>
+                        <p>Regular meditation, exercise, adequate rest, and adaptogenic herbs for long-term stress management.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Page -->
+    <div id="about" class="page">
+        <div class="page-header">
+            <div class="container">
+                <h1>About Nature's Healing</h1>
+                <p>Bridging ancient wisdom with modern wellness</p>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="about-content">
+                <div class="about-section">
+                    <h2>Our Mission</h2>
+                    <p>At Nature's Healing, we believe in the power of traditional herbal medicine combined with modern scientific understanding. Our mission is to provide accurate, accessible information about natural remedies that can complement conventional healthcare.</p>
+                </div>
+
+                <div class="about-section">
+                    <h2>Why Natural Remedies?</h2>
+                    <p>For thousands of years, humans have turned to nature for healing. Many modern medications are derived from plant compounds, proving that nature holds incredible therapeutic potential. Natural remedies often work gently with the body's systems, providing holistic healing with fewer side effects.</p>
+                </div>
+
+                <div class="about-section">
+                    <h2>Our Approach</h2>
+                    <p>We combine traditional knowledge with scientific research to provide reliable information about herbal medicine. Every remedy and herb profile is researched and presented with care, including proper dosages, preparation methods, and safety considerations.</p>
+                </div>
+
+                <div class="disclaimer">
+                    <h3><i class="fas fa-exclamation-triangle"></i> Important Disclaimer</h3>
+                    <p>The information provided on this website is for educational purposes only and is not intended as medical advice. Always consult with a qualified healthcare professional before using natural remedies, especially if you have existing health conditions or take medications. Natural doesn't always mean safe for everyone.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Page -->
+    <div id="contact" class="page">
+        <div class="page-header">
+            <div class="container">
+                <h1>Contact Us</h1>
+                <p>Questions about natural remedies? We're here to help!</p>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h2>Get in Touch</h2>
+                    <p>Have questions about natural remedies? Want to share your experience? We'd love to hear from you!</p>
+                    
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h3>Email</h3>
+                                <p>info@natureshealing.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-method">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h3>Phone</h3>
+                                <p>+1 (555) 123-HERB</p>
+                            </div>
+                        </div>
+                        <div class="contact-method">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <h3>Response Time</h3>
+                                <p>Within 24 hours</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Name *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <select id="subject" name="subject">
+                                <option value="general">General Question</option>
+                                <option value="remedy">Remedy Inquiry</option>
+                                <option value="safety">Safety Concern</option>
+                                <option value="suggestion">Suggestion</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-leaf"></i>
+                        <span>Nature's Healing</span>
+                    </div>
+                    <p>Empowering wellness through natural remedies and traditional herbal wisdom.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home" onclick="showPage('home')">Home</a></li>
+                        <li><a href="#remedies" onclick="showPage('remedies')">Remedies</a></li>
+                        <li><a href="#herbs" onclick="showPage('herbs')">Herbs & Spices</a></li>
+                        <li><a href="#about" onclick="showPage('about')">About</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="#safety">Safety Guidelines</a></li>
+                        <li><a href="#research">Research</a></li>
+                        <li><a href="#newsletter">Newsletter</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Connect</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Nature's Healing. All rights reserved. | For educational purposes only - consult healthcare professionals.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Herb Details Modal -->
+    <div id="herbModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="herbModalContent">
+                <!-- Content will be populated by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    
+   
+</body>
+<script src="styles/script.js"></script>
+</html>
